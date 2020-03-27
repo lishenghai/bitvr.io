@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+  	<meta name="csrf-token" content="rpvu6XvSAKRuGKhlFtz8qmAkFu78BhaWITgTw5Hw">
+  	<meta name="renderer" content="webkit">
+	<title>BITVR</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="icon" href="images/bitvr.ico">	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/particles.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+		<script src="js/layer/layer.js"></script>
+</head>
+<body>
+<!-- // navbar start -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+    		</button>
+      		<a class="navbar-brand" href="index.html"><img class="logo"  src="images/logo.png" alt=""></a>
+    	</div>
+    	<!-- Collect the nav links, forms, and other content for toggling -->
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      		<ul class="nav navbar-nav navbar-right">
+		        <li class="_nav-li"><a href="index.html#problems">Problems</a></li>
+		        <li class="_nav-li"><a href="index.html#solution">Solutions</a></li>
+		        <li class="_nav-li"><a href="index.html#features">Features</a></li>
+		        <li class="_nav-li"><a href="index.html#token-distribution">Token Distribution</a></li>
+		        <li class="_nav-li"><a href="index.html#paper">Whitepaper</a></li>
+		        <li class="_nav-li"><a href="index.html#team">Team</a></li>
+		        <li class="_nav-li"><a href="index.html#Media">Media & partners</a></li>
+		        <li class="_nav-li"><a href="index.html#roadmap">Roadmap</a></li>
+		        
+		        <li class="_nav-li _992-block"><a href="join-whitelist.html">Join Whitelist</a></li>
+		        <li class="_992-none"><a class="btn btn-primary btn-sl" href="join-whitelist.html">Join Whitelist</a></li>
+      		</ul>
+    	</div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav><!-- // navbar end -->
+<div class="main index-main">
+	<section class="airdrop-plan">
+		<div class="container">
+			<div class="airdrop-plan-wrap">
+				<div class="airdrop-plan-box">
+					<div class="title">
+						<h2 class="index-h2">BitVR's Airdrop Plan</h2>
+						<p class="text-center"><span class="title-underline"></span></p>
+						<p class="title-a">BVR Tokens</p>
+					</div>
+					<div class="text">
+						<ul>
+							<li class="clearfix" onclick="window.open('join-whitelist.html')">
+								<span class="item-icon whitelist"></span>
+								<a href="javascript:;" class="item-text">Register BitVR account once public sale is open.</a>								
+							</li>
+							<li class="clearfix">
+								<span class="item-icon email"></span>
+								<a href="javascript:;" class="item-text">Verify your email. After verification, you will receive a code and a password to log in.</a>
+								
+							</li>
+							<li class="clearfix" onclick="getToken(1,'https://t.me/BitVR_official');">
+								<span class="item-icon telegram"></span>
+								<a href="javascript:;" class="item-text">Join Telegram - https://t.me/BitVR_official</a>
+								
+								<span class="item-reward">Complete</span>
+								
+								<span class="item-label">Bonus 50 BVR Tokens</span>
+							</li>
+							<li class="clearfix" onclick="getToken(2,'https://www.facebook.com/Bitvr-1919559735014265');">
+								<span class="item-icon facebook"></span>
+								<a href="javascript:;" class="item-text">Like the Facebook page and repost - https://www.facebook.com/Bitvr-1919559735014265</a>
+								<span class="item-reward">Complete</span>
+								<span class="item-label">Bonus 50 BVR Tokens</span>
+							</li>
+							<li class="clearfix" onclick="getToken(3,'https://twitter.com/BitVR1')">
+								<span class="item-icon twitter"></span>
+								<a href="javascript:;" class="item-text">Follow on Twitter and retweet - https://twitter.com/BitVR1</a>
+								<span class="item-reward">Complete</span>
+								<span class="item-label">Bonus 50 BVR Tokens</span>
+							</li>
+							<li class="clearfix">
+								<span class="item-icon bvr"></span>
+								<a href="javascript:;" class="item-text">Start stacking your BVR tokens to enjoy VR/360˚ content and many related products discounts!</a>
+							</li>
+							<!-- <li class="clearfix">
+								<span class="item-icon bvr"></span>
+								<a href="javascript:;" class="item-text">Refer friends to earn 50 BVR for every referral.</a>
+								<span class="item-reward">50</span>
+								<span class="item-label">Bonus 50 BVR Tokens</span>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+		
+<script type="text/javascript">
+	function getToken(id,obj) {
+		window.open(obj);		
+		$.ajax({
+			url:"member/addtokens",
+			dataType:'json',
+			type:'POST',
+			data:{'id':id,'_token':'rpvu6XvSAKRuGKhlFtz8qmAkFu78BhaWITgTw5Hw'},
+			success:function(data){
+				console.log(data);
+			}
+		});
+	}
+</script>
+</body>
+</html>

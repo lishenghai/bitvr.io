@@ -1,0 +1,557 @@
+	@font-face {
+	    font-family: 'Overpass-Regular';
+	    src: url('../fonts/OVERPASS_REGULAR.eot');
+	    src: url('../fonts/OVERPASS_REGULAR.eot?#iefix') format('embedded-opentype'), 
+	    url('../fonts/OVERPASS_REGULAR.woff') format('woff'), 
+	    url('../fonts/OVERPASS_REGULAR.ttf') format('truetype'), 
+	    url('../fonts/OVERPASS_REGULAR.svg#glyphicons_halflingsregular') format('svg');
+	}
+	@font-face {
+	    font-family: 'Overpass-Light';
+	    src: url('../fonts/OVERPASS_LIGHT.eot');
+	    src: url('../fonts/OVERPASS_LIGHT.eot?#iefix') format('embedded-opentype'), 
+	    url('../fonts/OVERPASS_LIGHT.woff') format('woff'), 
+	    url('../fonts/OVERPASS_LIGHT.ttf') format('truetype'), 
+	    url('../fonts/OVERPASS_LIGHT.svg#glyphicons_halflingsregular') format('svg');
+	}
+	@font-face {
+	    font-family: 'Overpass-Bold';
+	    src: url('../fonts/OVERPASS_BOLD.eot');
+	    src: url('../fonts/OVERPASS_BOLD.eot?#iefix') format('embedded-opentype'), 
+	    url('../fonts/OVERPASS_BOLD.woff') format('woff'), 
+	    url('../fonts/OVERPASS_BOLD.ttf') format('truetype'), 
+	    url('../fonts/OVERPASS_BOLD.svg#glyphicons_halflingsregular') format('svg');
+	}
+	@font-face {
+	    font-family: 'Viga-Gegular';
+	    src: url('../fonts/VIGA-REGULAR.eot');
+	    src: url('../fonts/VIGA-REGULAR.eot?#iefix') format('embedded-opentype'), 
+	    url('../fonts/VIGA-REGULAR.woff') format('woff'), 
+	    url('../fonts/VIGA-REGULAR.ttf') format('truetype'), 
+	    url('../fonts/VIGA-REGULAR.svg#glyphicons_halflingsregular') format('svg');
+	}
+	body {font-family: "Overpass-Regular","Overpass-Light","Overpass-Bold";}
+	ul {padding-left: 0px;}
+	ul li{list-style: none;}
+	.bg-dark{background:#f3f8fe;}
+	.index-h2{margin-top: 0; font-family: "Overpass-Regular";font-size: 2.5rem;font-weight: bold;text-align: center;line-height: 2.6rem;letter-spacing: 0px;color: #000d23;}
+	.title-underline{display: inline-block;margin:1rem 0; width: 5rem;height: 5px;background-color: #02b3e3;}
+	.subtitle{font-size: 1rem;font-family: "Overpass-Light";line-height: 1.5rem;color: #000d23;}
+	.images-box{text-align: center;}
+	.images-box img{width: 100%;}
+	a, .btn{-webkit-transition: color .3s ease;transition: color .3s ease;}
+    .btn{-webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;}
+    .logo{width: 8.2rem;}	
+    .margin-bottom0 {margin-bottom: 0px;}
+    .form-group .form-control {font-family: Overpass-Light;}
+    .btn-primary {background-color: #02b9eb;border-color: #02b9eb;}
+    .mask-img {opacity: 0.4;-webkit-transition: opacity:.3s ease;transition: opacity .3s ease;}
+    .mask-img:hover {opacity: 1;}
+    .btn-primary:hover {color: #fff;background-color: #2ab3ea;border-color: #2ab3ea;}
+    .loading{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);display: none;}
+	.no-wrap{white-space:nowrap;}
+	.border-bottom-t{border-bottom: transparent;}
+	.mark{position: fixed;top:0;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.3;z-index: 1000;display: none;}
+
+
+
+	
+
+	/*banner*/
+	.banner{width: 100%;height:40rem;text-align: center;position: relative;overflow: hidden;}
+	.background{width: 100%;height: 100%;position: absolute;top:0;left:0;}
+	.background img{height: 100%;width: 100%;z-index: -1;}
+	.banner .text {width: 100%;padding: 0 1.5rem;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%); text-align: center;color: #f15a29;text-shadow: 0px 0px 10px rgba(0,0,0,0.56);font-size: 2rem;}
+	.banner-text .images-width{width: 4.9rem;opacity: 0.4;}
+	.banner-text .images-width:hover{opacity: 1;}
+
+
+
+	/*everyone-wins*/
+	
+	.padding-pic-sl{padding-top: 8rem;padding-bottom: 8rem}
+	.subscribe{background: #00173f;padding-top: 8rem;padding-bottom: 8rem}
+	.partners{background-color: #00173f;}
+	.videos{background: #00173f;color: #fff;}
+
+	/*.everyone-wins .title{margin-bottom: 5rem;}*/
+	.everyone-wins-img{max-width: 1000px;}
+
+	/*The Business*/
+	.the-business{padding-top: 0;}
+	.the-business .title{margin-top: 5rem;}
+	.business-list-box .row{margin-top: 5rem;}
+	.business-list-box .text{padding-left: 1.8rem;padding-right: 1.8rem; text-align: left;font-size: 0.8rem;line-height: 1.5rem;color: #666666;font-family: "Overpass-Light";}
+	.business-list-box .text li {list-style: disc;color: #778bab}
+	.business-list-box .text li span {color: #666666;}
+	.business-list-box .text .subtitle{text-align: center;margin:1.5rem 0 1rem;font-family: "Overpass-Regular";}
+	.business-list-box .images-a{height: 5.8rem;}
+	.business-item-a{font-family: Overpass-Regular;font-size: 1rem;line-height: 1.5rem;color: #172844;}
+	.business-item-a span{display: inline-block;padding: 1rem;background-color: #f3f8fe;box-shadow: 0px 2px 6px 0px rgba(128, 128, 128, 0.17);border-radius: 10px;}
+
+	/*Our mission*/
+	
+	.subtitle-a{border-bottom:1px solid #b4cae4;font-size: 18px;line-height: 30px;color: #000d23;}
+	.subtitle-a span{float: left;display: block;margin-top: -20px;padding: 5px 10px;font-family: "Overpass-Regular";font-size: 1rem; background: #f3f8fe;}
+	.our-mission-item {padding-top: 6rem;}
+	.our-mission-item .subtitle{padding: 3rem 14rem 4.5rem; font-size: 1.3rem;line-height: 2rem;}
+
+	/*token-distribution*/
+	
+	.token-distribution .images-box{margin-top: 4.5rem;}
+
+	/*subscribe*/
+	
+	.subscribe-primary {padding: 0.8rem 0.6rem;font-family: "Overpass-Regular";font-size: 1rem;border-radius: 10px;}
+
+	.subscribe .text-a {font-size: 2rem;line-height: 2rem;letter-spacing: 2px;color: #ffffff;font-family: "Overpass-Regular";}
+	.subscribe .text-b {font-size: 1rem;line-height: 1.5rem;letter-spacing: 1px;color: #ffffff;font-family: "Overpass-Light";}
+	.subscribe-form-control {color: #000;border-radius: 10px;font-size: 0.8rem;padding: 1.4rem 0.6rem;font-family: Oevrpass_light;}
+
+
+
+	/*paper*/
+	.paper{padding-top: 5rem;padding-bottom: 5rem;}
+	.paper-text{padding-top: 7rem;}
+	.paper .text-a{font-family: "Overpass-Regular";font-size: 1.5rem;line-height: 2rem;color: #172844;}
+	.paper .text-b{margin-top: 2rem;margin-bottom: 4.5rem;font-family: Overpass-Light;font-size: 1.3rem;line-height: 2rem;color: #778bab;}
+	.paper .btn-primary {background-color: #02b9eb;border-radius: 30px;font-family: "Overpass-Regular";font-size: 20px;color: #ffffff;border-color: #02b9eb;padding: 12px 60px;}
+	.paper .btn-primary:hover {color: #fff;background-color: #02b3e3;border-color: #02b3e3;}
+
+	
+	/*team*/
+	
+	.team-list ul .row { margin: 4.5rem 0 0;}
+	.team-list ul li {position: relative;}
+	.team-list ul li .team-box {width: 100%;max-width: 19rem;padding: 0 0.5rem 2rem;text-align: center;margin: 0 auto;box-shadow: 0px 0px 14px 0px rgba(77,77,77,0.2);box-sizing: border-box;z-index: 1;background-color: #fff;}
+	.team .images-box{height: 18rem;}
+	.team-list ul li .team-box .resume-text {height: 100%;margin-left: -0.5rem;margin-right: -0.5rem;text-align: left;padding: 1rem 1.5rem;background-color: rgba(103, 121, 136, 0.83); font-family: Overpass-Regular;font-size: 12px;line-height: 1.1rem;color: #ffffff;display: none;overflow: auto;}
+	.team .member-data {color: #000d23;background-color: #fff;}
+	.team .member-data .name {margin-bottom: 0px;font-family: Overpass-Bold;font-size: 1.35rem;line-height: 2.7rem;color: #212228;}
+	.team .member-data .name ._in_sl {display: inline-block;margin-right: 0.8rem;}
+	.team .member-data .name img {width: 2.3rem;}
+	.team .member-data .post {margin-bottom: 0px;font-family: Overpass-Light;font-size: 0.7rem;line-height: 1.5rem;color: #888a92;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+	.team .Harvey-Tsoi {background: url(../images/Harvey-Tsoi.png)no-repeat center center;background-size: 69.74%;}
+	.team .Alan-Li {background: url(../images/Alan-Li.png)no-repeat center center;background-size: 69.74%;}
+	.team .Peter-Lau {background: url(../images/Peter-Lau.png)no-repeat center center;background-size: 69.74%;}
+	.team .Bruce-Xian {background: url(../images/Bruce-Xian.png)no-repeat center center;background-size: 69.74%;}
+	.team .Vera-Zhao {background: url(../images/Vera-Zhao.png)no-repeat center center;background-size: 69.74%;}
+	.team .Max-Cheung {background: url(../images/Max-Cheung.png)no-repeat center center;background-size: 69.74%;}
+	.team .Jason-Pang {background: url(../images/Jason-Pang.png)no-repeat center center;background-size: 69.74%;}
+	.team .Lucas-Zheng {background: url(../images/Lucas-Zheng.png)no-repeat center center;background-size: 69.74%;}
+	.team .Lian-Wai {background: url(../images/Lian-Wai.png)no-repeat center center;background-size: 69.74%;}
+	.team .Gary-Yeung {background: url(../images/Gary-Yeung.png)no-repeat center center; background-size: 69.74%;}
+	.team .Ivan-Cheung {background: url(../images/Ivan-Cheung.png)no-repeat center center;background-size: 69.74%;}
+	.team .Geraldine-Jippe {background: url(../images/Geraldine-Jippe.png)no-repeat center center;background-size: 69.74%;}
+	.team .Stefan-Beyer {background: url(../images/Dr.-Stefan-Beyer.png)no-repeat center center;background-size: 69.74%;}
+	.team .Richard-Ihuel {background: url(../images/Richard-Ihuel.png)no-repeat center center;background-size: 69.74%;}
+	.team .Debbie-Liu {background: url(../images/Debbie-Liu.png)no-repeat center center;background-size: 69.74%;}
+	.team .Adam-Cheng {background: url(../images/Adam-Cheng.png)no-repeat center center;background-size: 69.74%;}
+	.team .Oscar-Tuet {background: url(../images/Oscar-Tuet.png)no-repeat center center;background-size: 69.74%;}
+	.team .Chris-Lepitak {background: url(../images/Chris-Lepitak.png) no-repeat center center;background-size: 69.74%; }
+	.advisors-investors{padding-top: 0;padding-bottom: 0;}
+
+	/*partners*/
+	
+	.partners-box{padding: 4rem  0.5rem 5.5rem; background-color: #ffffff;border-radius: 20px;}
+	.partners-box .title{padding-bottom: 3.5rem;}
+	.partners-box .images-a{margin-right: 20px;width: 8rem; max-width: 164px;}
+	.partners-box .list img{margin: 1.5rem 2rem;}
+	
+	/*Roadmap*/
+	
+	.roadmap .title{margin-bottom: 5.5rem;}
+	.expectation-list{border-left:1px solid #b8e7f9;margin-top: 8rem;padding-top: 1.5rem;}
+	.expectation-list .help-block{height: 1.8rem;}
+	.expectation-list .item{display: table;}
+	.expectation-list .item .left{display: table-cell;width: 10rem;vertical-align: middle;}
+	.expectation-list .item .right{display: table-cell;vertical-align: middle;margin-top: 2.5rem;padding: 2.5rem 2.7rem; background-color: #ffffff;box-shadow: 0px 5px 10px 0px rgba(203, 214, 222, 0.3);border-radius: 10px;border: solid 1px #ecf4ff;}
+	.expectation-list .item .left .hr{height: 1px;background: #b8e7f9;margin-top: -1.7rem;}
+	.expectation-list .item .left span{ display:inline-block;margin-left: -1.7rem;width: 3.4rem;height: 3.4rem; background:#fff url(../images/roadmap-icon-a.png)no-repeat center center;z-index: 2;background-size: 3.4rem 3.4rem;}
+	.expectation-list .item .right h3{margin-bottom: 1.2rem;font-family: Overpass-Regular;font-size: 1.7rem;font-weight: bold;line-height: 1.5rem;letter-spacing: 1px;color: #000d23;}
+	.expectation-list .item .right ul{padding-left: 15px;}
+	.expectation-list .item .right ul li{list-style-type: disc;color: #778bab;}
+	.expectation-list .item .right p{font-family: Overpass-Light;font-size: 0.9rem;line-height: 1.2rem;color: #778bab;}
+	.expectation-list .item .right img{width: 5.1rem;}
+	.expectation-list .item .right .box{display: table;}
+	.expectation-list .item .right .img-wrap{display: table-cell;vertical-align: middle;padding-right: 1.5rem;}
+	.expectation-list .item .right .text-wrap{display: table-cell;vertical-align: middle;}
+
+	/*videos*/
+	
+	.videos h2{margin-bottom: 2rem; font-family: "Overpass-Regular";font-size: 2.5rem;font-weight: bold;line-height: 3rem;letter-spacing: 1px;}
+	.videos h3{font-family: Overpass-Regular;font-size: 1.4rem;line-height: 2rem;}
+	.videos .text-a{font-family: "Overpass-Bold";font-size: 0.8rem;line-height: 2rem;color: #02b3e3;}
+	.videos .text-b{font-family: Overpass-Light;font-size: 1rem;line-height: 1.7rem;color: #e1f0fa;}
+	.videos .sl-margin{margin-top: 5.7rem;}
+	.videos .images-a { width: 3rem;}
+	.video-box {position: relative;}
+	.play {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+
+
+	
+	/*footer*/
+	.footer{padding-top: 5rem;padding-bottom: 4rem;}
+	.footer .margin-sl{margin-top: 2rem;}
+	.footer-text{font-family: Overpass-Light;font-size: 0.8rem;line-height: 1.5rem;color: #000000;}
+	.footer-text a{color: #000;text-decoration: none;}
+	.footer-text a:hover{color: #8e8e8e;}
+	.footer-text span{color: #000;padding: 0 5px;}
+	.footer-text-a p{font-family: Overpass-Light;font-size: 0.8rem;line-height: 1.5rem;color: #808080;}
+	.footer-icon{padding-top: 3rem;}
+	.footer-icon a{margin-left: 0.75rem; display: inline-block;width: 2.5rem ;height: 2.5rem;}
+	.footer-icon .linkedin{background: url(../images/footer-icon.png)no-repeat; background-position: 0 0;background-size: 14.65rem;}
+	.footer-icon .telegram{background: url(../images/footer-icon.png)no-repeat; background-position: -3rem 0;background-size: 14.65rem;}
+	.footer-icon .facebook{background: url(../images/footer-icon.png)no-repeat; background-position: -5.7rem 0;background-size: 14.65rem;}
+	.footer-icon .twitter{background: url(../images/footer-icon.png)no-repeat; background-position: -8.7rem 0;background-size: 14.65rem;}
+	.footer-icon .m{background: url(../images/footer-icon.png)no-repeat; background-position: -12.1rem 0;background-size: 14.65rem;}
+	.footer-icon a:hover{opacity: 0.8;}
+	.footer .hr{margin-top: 2rem;height: 1px;background-color: #b4cae4;}
+
+	.top {position: fixed;right: 1rem;bottom: 4rem;display: none;}
+	.video-iframe{position: fixed;background:rgba(255,255,255,.5); top: 50%;left: 50%;transform: translate(-50%,-50%);height: 100%;width: 100%;max-width: 900px;display: none; max-height: 600px;z-index: 1040;}
+	.video-iframe-loading{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: -1;}
+	.colse-ico{width: 40px;height: 40px;position: fixed;top: -40px;right: -40px;background:url(../images/close.png)center center no-repeat;}
+	.mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index: 1039;display: none;background:rgba(0,0,0,0.5);}
+
+
+	/*Risk Discalimers*/
+	.risk-discalimers{padding: 4rem 0 8rem;}
+	.risk-discalimers h4{margin:3rem 0 0.8rem; font-family: Overpass-Regular;font-size: 0.9rem;line-height: 8px;color: #172745;font-weight: 600;}
+	.risk-discalimers p{font-family: Overpass-Light;font-size: 0.9rem;line-height: 1.6rem;color: #80899b;}
+	
+
+	/*join-whitelist*/
+	.join-whitelist{padding:3.5rem 0 0;}
+	.join-whitelist .title{padding-bottom: 2rem;}
+	.join-whitelist label{font-family: Overpass-Light;font-size: 1rem;line-height: 1.5rem;color: #6998b8;margin-bottom: 0.5rem;font-weight: normal;}
+	.join-whitelist .btn-link{color: #02b9eb;}
+	.join-whitelist .form-group{margin-bottom: 1.3rem;}
+	.radio-list label{color: #172745;padding-left: 1.25rem;}
+	.radio-list input{margin-left: -1.25rem!important;margin-top: 6px;width: 1rem;height: 1rem;}
+	.join-whitelist .form-control::-webkit-input-placeholder{color: #6998b8;}
+
+
+	.resume-text::-webkit-scrollbar{width:3px;height: 16px;background-color:#f1f1f1;}
+	.resume-text::-webkit-scrollbar-track{background-color:transparent;}
+	.resume-text::-webkit-scrollbar-thumb{background-color:#c1c1c1;}
+
+	.resume-text::scrollbar{width:3px;height: 16px;background-color:#f1f1f1;}
+	.resume-text::scrollbar-track{background-color:transparent;}
+	.resume-text::scrollbar-thumb{background-color:#c1c1c1;}
+
+	.resume-text::-moz-scrollbar{width:3px;height: 16px;background-color:#f1f1f1;}
+	.resume-text::-moz-scrollbar-track{background-color:transparent;}
+	.resume-text::-moz-scrollbar-thumb{background-color:#c1c1c1;}
+
+
+	/*login*/
+	.login, .sign-up{padding-top: 2rem;}
+	.login h1, .sign-up h1{margin-bottom: 2.5rem; text-align: center; font-family: "Overpass-Regular";font-size: 2rem;color: #172745;}
+	.pic-form{max-width: 950px;margin:0 auto;}
+	.pic-form .form-group{margin-bottom: 1.25rem;}
+	.pic-form .form-control{height: 2.5rem;line-height:2rem;min-height: 34px; border-radius: 10px;font-family: "Overpass-Light";font-size: 16px;color: #000;}
+	.pic-form .form-control::-webkit-input-placeholder{font-family: "Overpass-Light";font-size: 16px;color: #999999;}
+	.pic-form .form-control:-moz-placeholder{font-family: "Overpass-Light";font-size: 16px;color: #999999;}
+	.pic-form .form-control::-moz-placeholder{font-family: "Overpass-Light";font-size: 16px;color: #999999;}
+	.pic-form .form-control:-ms-input-placeholder{font-family: "Overpass-Light";font-size: 16px;color: #999999;}
+	.pic-form .control-label{margin-bottom: 0.9rem;font-family: "Overpass-Regular";font-size: 0.9rem;line-height: 1.5rem;color: #6998b8;}
+	.pic-form .checkbox{margin-top: -10px;}
+	.pic-form .checkbox label{font-family: "Overpass-Light";font-size: 0.8rem;color: #666666;}
+	.pic-form .checkbox label a{color: #02b9eb;}
+	.pic-form .pic-btn{min-height: 34px; margin-top: 2.5rem;height: 2.5rem;box-shadow: 0px 8px 16px 0px rgba(179, 179, 179, 0.21);border-radius: 10px;font-family: Overpass-Bold;font-size: 0.9rem;color: #ffffff;}
+	.pic-form .sign{min-height: 34px; padding-top: 0.4rem;padding-bottom: 0.75rem; font-family: "Overpass-Light";text-decoration: underline;font-size: 0.8rem;line-height: 1.5rem; color: #808080;}
+	.pic-form .sign a{font-family: "Overpass-Regular";font-size: 0.8rem;color: #02b9eb;}
+	.btn-facebook{background: #295396;width: 10rem;height: 2.5rem;line-height:1.75rem;font-family: Overpass-Light;font-size: 0.9rem;color: #ffffff;border:none;}
+	.btn-facebook img{width: 1.25rem;margin-right: 0.5rem;}
+	.btn-facebook:hover{color: #fff;background: #3a619e;}
+
+	/*会员中心公共样式*/
+	.member-pic-content{max-width: 1140px;width: 82%;margin:0 auto;}
+	.member-pic-box{padding-top: 4rem;}
+
+	/*侧边目录*/
+	.side-catalog{position: fixed;left: 4rem;top:10rem;z-index: 1009;}
+	.side-catalog .side-bar {position: absolute;top: 0;width: 0;height: 700px;background-color: #b8e7f9;border: 1px solid #b8e7f9;border-top: 0;border-bottom: 0;right: 0.2rem;z-index: -1;}
+	.catalog-item{line-height: 1.5rem;padding: 1.5rem 0;}
+	.catalog-item .left{float: left;}
+	.catalog-item .middle{float: right;width: 2rem;padding-left: 0.5rem;line-height: 1.15rem;}
+	.catalog-item .right{float: right;}
+	.catalog-item .left a{font-family: "Overpass-Regular";font-size: 1rem;line-height: 1.5rem;color: #a5b3cc;text-decoration: none;}
+	.catalog-item:hover a{text-decoration: none;color: #172745;}
+	.catalog-item:hover .right span{margin-right: -0.4rem;width: 1.4rem;height: 1.4rem;background: #fff url(../images/roadmap-icon-a.png)no-repeat center center;background-size: 1.4rem 1.4rem;z-index: 12;}
+    .catalog-item:hover .middle{margin-right: -0.475rem;}
+	.catalog-item .middle .hr{display: inline-block; width: 100%; height: 1px;background: #b8e7f9;margin: 0;}
+	.catalog-item .right span{display: inline-block;width: 0.45rem;height: 0.45rem;border-radius: 50%;background: #a5b3cc;z-index: 10;}
+	.catalog-list .active .left a{color: #172745;}
+	.catalog-list .active .right span{margin-right: -0.4rem; width: 1.4rem;height: 1.4rem;background: #fff url(../images/roadmap-icon-a.png)no-repeat center center;background-size: 1.4rem 1.4rem;z-index: 12;}
+	.catalog-list .active .middle{margin-right: -0.475rem}
+	.side-catalog .active-ico{position: absolute;top:1.55rem;right: -0.4rem;width: 1.4rem;height: 1.4rem;background: #fff url(../images/roadmap-icon-a.png)no-repeat center center;background-size: 1.4rem 1.4rem;z-index: 12;}
+	.jiantou-box{position: absolute;right: -30px; top:50%;-webkit-transition:left 1s ease ;transition:left 1s ease;display: none;z-index: 999;}
+	.jiantou{display: inline-block;width: 30px;height: 30px;background: url('../images/jiantou.png') no-repeat center;cursor: pointer;}
+	.jiantou-box:hover{opacity: 1;}
+	.jiantou-box.jiantou-active{opacity: 1;transform: rotate(180deg);
+    transition: transform .3s, left 1s ease;}
+
+	/*Change Password*/
+	.change-pass .pic-form{max-width: 700px;}
+	.change-pass h4{font-family: Overpass-Regular;margin:0 0 2.2rem 0;font-size: 1rem;color: #333333;}
+	.change-pass .pic-form .pic-btn, .buy .pic-form .pic-btn{width: 14.2rem;height: 3.2rem;line-height:1.8rem;background-color: #02b9eb;font-size: 1rem;border:3px solid #b3eaf9; border-radius: 1.5rem;box-shadow: none;}
+
+	/*faq*/
+	.faqs{padding-top: 16px;}
+	.faq-list dt{padding-bottom:10px;}
+	.faq-list dt a{font-family: Overpass-Light;font-size: 20px;line-height: 36px;color: #666666;text-decoration: none;}
+	.faq-list dd{box-shadow: 0px 8px 16px 0px rgba(179, 179, 179, 0.21);border-radius: 10px;border: solid 1px #e6e6e6;font-family: Overpass-Light;font-size: 16px;line-height: 28px;color: #999999;opacity: 0;height: 0;overflow: hidden;}
+	.faq-list dt a:hover{color: #02b9eb;}
+	.faq-list .active dt a{color: #02b9eb;}
+	.faq-list .active dd{padding: 20px 15px; opacity: 1;height: auto;-webkit-transition: opacity 1s ease;transition: opacity 1s ease;}
+
+	/*timetable*/
+	.timetable-top .timetable-top-text{padding-top: 16px; display: flex;justify-content: center;}
+	.timetable-top .timetable-top-a{float:left;padding-right: 2.5rem;}
+	.timetable-top .timetable-top-a p{font-family: "Overpass-Bold";font-size: 1.2rem;line-height: 1.7rem ;color: #6ecff6;white-space:nowrap;}
+	.timetable-top .timetable-top-b{float: left;}
+	.timetable-top .timetable-top-b p{font-family: "Overpass-Regular";font-size: 0.9rem;color: #333333;line-height: 1.7rem;white-space:nowrap;}
+	.timetable-bottom{padding-top: 2.2rem;}
+	.timetable-bottom .table{max-width: 700px;margin:0 auto;}
+	.table-responsive .table>tbody>tr>th{border-top:none;border-bottom: 1px solid #bdcdd9; font-family: "Overpass-Regular";font-size: 0.9rem;color: #6998b8;}
+	.table-responsive .table>tbody>tr>td{border-top:none;border-bottom: 1px solid #bdcdd9; font-family: Overpass-Light;font-size:0.7rem;line-height: 1.75rem;color: #333333;}
+	.price-item{width:100%;/*width: 15.5rem;*/height: 4rem;line-height: 4rem;text-align: center;background-color: #ffffff;box-shadow: 0px 5px 10px 0px 
+		rgba(203, 214, 222, 0.3);border-radius: 10px;border: solid 1px #ecf4ff;}
+	.price-item .tit{padding-right: 1rem; font-family: Viga-Regular;font-size: 1.5rem;color: #333333;}
+	.price-item .number{font-family: Overpass-Bold;font-size: 1.2rem;}
+	.price-item.margin-auto{margin:0 auto;}
+
+	.gradient-color {
+	    background-image: -webkit-gradient(linear, left top, right top, from(#6ecff6), to(#06498b));
+	    background-image: -webkit-linear-gradient(left, #6ecff6, #06498b);
+	    background-image: -o-linear-gradient(left, #6ecff6, #06498b);
+	    background-image: linear-gradient(to right, #6ecff6, #06498b);
+	    -webkit-background-clip: text;
+	    /*background-clip: text;*/
+	    -webkit-text-fill-color: transparent;
+	}
+
+
+	/*buy*/
+	.buy{padding-top: 1.1rem;}
+	.buy .pic-form{padding-top: 3rem; max-width: 100%;}
+	.pic-form label .notice{padding-left: 1rem; font-family: Overpass-Light;font-size: 0.8rem;color: #666666;}
+	.buy .pic-form .dont-have{padding-top: 1rem; font-family: Overpass-Light;text-decoration: underline;font-size: 0.8rem;color: #808080;}
+	.buy .pic-form .dont-have a{font-family: "Overpass-Regular";text-decoration: underline;color: #02b9eb;}
+	.buy .h4{margin-top: 0; font-family: "Overpass-Regular";font-size: 1.2rem;color: #666666;}
+	.buy .h4-a{margin: 2.5rem 0 1.25rem; font-family: Overpass-Bold;font-size: 1.3rem;color: #6ecff6;}
+	.buy .text-b{margin-bottom: 0;font-family: Overpass-Light;font-size: 0.7rem;line-height: 1.2rem;color: #666666;}
+	.buy .text-a{font-family: Overpass-Light;font-size: 0.8rem;color: #666666;}
+	.buy .text-c{font-family: Overpass-Light;font-size: 0.9rem;color: #666666;}
+	.buy .text-a span{color: #02b9eb;font-family: "Overpass-Regular";text-decoration: underline;}
+	.buy .text-c span{color: #02b9eb;font-family: "Overpass-Regular";}
+	.buy .text-decoration{text-decoration: underline;}
+	.buy .text-b-box{margin-top: 2.5rem;}
+	.buy .progress-box-sl{padding:5px;margin:40px auto; max-width: 700px;background: #c5d1db;border-radius: 27px;}
+	.buy .progress{width: 90%; position: relative; float: left; margin-bottom: 0;height: 2.2rem;line-height: 2.2rem;border-radius:1.1rem;background-color: #d8e1e8;box-shadow: inset 2px 1px 7px 0px rgba(0, 53, 83, 0.35);}
+	.buy .progress .text-e{position: absolute;width: 100%;text-align: center; font-family: Overpass-Light;font-size: 1.1rem;color:#fff;}
+	.buy .progress-bar{border-radius:1.1rem;background: -webkit-linear-gradient(left bottom,#0195d1,#003376);background: -o-linear-gradient(left bottom,#0195d1,#003376);background: -mos-linear-gradient(left bottom,#0195d1,#003376);background: -moz-linear-gradient(left bottom,#0195d1,#003376);background: linear-gradient(left bottom,#0195d1,#003376);}
+	.buy .progress-box-sl .percentage-sl{float: right;margin-top: 0.5rem;margin-right: 0.5rem;font-family: "Overpass-Regular";font-size: 1rem;color: #010101;}
+	.buy .progress-text-a{font-family: Overpass-Bold;font-size: 1.2rem;color: #6ecff6;}
+	.buy .padd-top0{padding-top: 0;}
+	.buy .padd-top0 .pic-btn{margin-top: 1rem}
+	.buy .h4-b{margin: 56px 0 30px;font-family: "Overpass-Regular";font-size: 20px;color: #333333;}
+	.pagination-sl{display: inline-block;}
+	.pagination-sl li{float: left;margin:0 1rem;}
+	.pagination-sl li a{font-family: Overpass-Light;font-size: 16px;color: #808080;}
+	.pagination-sl .left{width: 20px; height: 20px; background: url(../images/prev.png)no-repeat center center;}
+	.pagination-sl .right{width: 20px; height: 20px; background: url(../images/next.png)no-repeat center center;}
+	.pagination-sl .active a{text-decoration: underline;color: #02b9eb;}
+	.buy .text-d{font-family: Overpass-Light;font-size: 12px;line-height: 1.25rem;color: #808080;}
+	.copy-address-box {position: relative;}
+	.buy .copy-address-box{margin: 2.5rem 0 2rem;}
+	.copy-address {padding: 0.5rem 7.5rem 0.5rem 1rem;text-align: center;line-height: 30px;background-color: #f5f5f5;box-shadow: 0px 8px 16px 0px rgba(179, 179, 179, 0.21);border-radius: 0.5rem;border: solid 1px #e6e6e6;box-sizing: border-box;font-family: Overpass-Light;font-size: 0.8rem;color: #666666;}
+	.copy-address-box .copy-btn {position: absolute;right: 1rem; top:0.75rem; display: inline-block;padding-left: 1.5rem;height: 1.1rem;background: url(../images/copy.png)no-repeat;background-position: left center;font-family: "Overpass-Regular";text-decoration: underline;font-size: 0.8rem;color: #333333;cursor: pointer;}
+	.copy-address-box .copy-son {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+	/*coming-soon*/
+	.coming-soon{margin:1.4rem 0; padding: 1.25rem 2.5rem; background-color: #ffffff;box-shadow: 0px 5px 10px 0px rgba(203, 214, 222, 0.3);border-radius: 10px;border: solid 1px #ecf4ff;}
+	.coming-soon-left h2{margin-top: 0; font-size: 2.5rem;font-family: "Overpass-Regular";background-image: -webkit-gradient(linear, left top, right top, from(#ffbf00), to(#fc4f00));background-image: -webkit-linear-gradient(left, #6ecff6, #05488a);background-image: -o-linear-gradient(left, #6ecff6, #05488a);background-image: linear-gradient(to right, #6ecff6, #05488a);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+	.coming-soon-left p{padding-left: 5px; margin-bottom: 0; font-size: 1rem;color: #808080;font-family: Overpass-Light;}
+	.coming-soon-right span{display: inline-block; min-width: 1.15rem; font-size: 2.4rem;color: #333333;letter-spacing: 1px;}
+	.coming-soon-right .colon{display: inline;padding: 0 0.5rem;}
+	.coming-soon-right em{font-style: normal; font-size: 1.5rem;color: #999999;}
+	/*coming-soon*/
+
+@media screen and (max-width:767px){
+	html{font-size: 12px;}
+	.team-list ul .row {margin: 0;}
+	.team-list ul li{margin-bottom: 5rem;}
+	.paper .btn-box{margin-bottom: 2rem;}
+	.subscribe .form-group{padding-left: 0;padding-right: 0;}
+	.our-mission-item .subtitle {padding: 0;}
+	.expectation-list {margin-left: 1.7rem;}
+	.expectation-list .item .right .box {display: block;}
+	.expectation-list .item .right .img-wrap {display: block;padding-right: 0;}
+	.expectation-list .item .right .text-wrap {display: inline-block;}
+	.expectation-list .item .left {width: 3rem;}
+	.team-list ul li .team-box {max-width: 100%;}
+	.team .images-box {height: 24rem;}
+	.videos .video-box{margin-bottom: 3rem;}
+	.team .member-data .post {font-size: 1rem;}
+	.phone-none{display: none!important;}
+
+	.video-iframe{max-height: 200px;}
+	.colse-ico{position: fixed;top: -60px;right: 5px;}
+	.banner .text {font-size: 1.6rem;margin-top: 30px;}
+	.banner-text .images-width {width: 4rem;margin-bottom: 1rem;}
+
+	.footer .footer-text p{margin-bottom: 0;}
+	.paper-text {padding-top: 0;}
+	.paper .btn-box {margin-bottom: 5rem;}
+	.join-whitelist {padding: 8.5rem 0 0;}
+	.risk-discalimers {padding: 8rem 0;}
+	.pic-nav .navbar-nav> li> a {font-size: 14px;}
+	.side-catalog{left: 15px;top: 56px;}
+	.side-catalog .side-bar {height: 100%;}
+	.member-pic-box{padding: 8rem 15px 0;}
+	.buy .progress-box-sl .percentage-sl{margin-right: 0;}
+	.price-item{width: 100%; margin:0 auto 2rem;}
+	.price-item.margin-auto {margin:0 auto 2rem;}
+	.price-item.pull-right{float:none!important;}
+	.price-item .tit {padding-left: 1.5rem;float: left;}
+	.price-item .number { float: right;padding:0 1.5rem;}
+	.buy .text-b-box.pull-right{float: left!important;}
+	.copy-address {overflow: auto;}
+	.copy-address-box .copy-btn {position: static; padding-left: 2.2rem;}
+	.copy-address {padding: 0.5rem 1rem;}
+	.timetable-top .timetable-top-text {display: block;}
+	.timetable-top .timetable-top-b p,.timetable-top .timetable-top-a p {white-space: normal;}
+	.navbar-default ._nav-blance>a>span{color: #000d23;padding: 0 0 0 1rem}
+	.navbar-default ._nav-blance>a{padding-right: 0 !important;}
+	.pic-form .checkbox label{font-family: "Overpass-Light";font-size: 0.8rem;color: #666666;line-height:2rem;}
+	.register-label{ line-height:1.35rem !important; }
+	/*coming-soon*/
+	.coming-soon{text-align: center;}
+	.coming-soon-right{padding-top: 1rem;}
+	.coming-soon-right span{font-size: 1.6rem;}
+	/*coming-soon*/
+
+}
+
+
+
+
+@media screen and (min-width:768px){
+	html{font-size: 14px;}
+	.index-main{margin-top: 4.8rem;}
+	.pc-none{display: none!important;}
+	.padding-top0{padding-top: 0;}
+
+	/*导航条*/
+	/*@media screen and (min-width:768px)*/
+	.navbar {min-height: 4.7rem;margin-bottom: 0px;-webkit-transition: all 0.3s ease-in-out,-webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1);-moz-transition: all 0.3s ease-in-out,-moz-transform 1s cubic-bezier(0.86, 0, 0.07, 1);transition: all 0.3s ease-in-out,transform 1s cubic-bezier(0.86, 0, 0.07, 1);}
+	.navbar-brand {height: 4.7rem;}
+	.navbar-brand img{margin-top: 0.4rem;}
+
+	.navbar-nav {padding-top: 1rem;padding-bottom: 1.1rem;}
+	.navbar-default {background-color: #fff;}
+	.navbar-default .navbar-nav>li>.btn-sl{padding-left: 2.4rem;padding-right: 2.4rem; color: #fff;border-radius: 25px;background-color: #02b3e3;border-color: #02b3e3;font-family: "Overpass-Regular";}
+	.navbar-default .navbar-nav>li>.btn-primary:hover {color: #fff;background-color: #02b9eb;border-color: #02b9eb;}
+	.slideout{-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-o-transform:translateY(-100%);transform:translateY(-100%)}	
+	.navbar-default .navbar-nav>._nav-li{position: relative;overflow: hidden;-webkit-transition: all .3s ease;transition: all .3s ease;cursor: pointer;-webkit-transform: perspective(2px) translateZ(0);transform: perspective(2px) translateZ(0);}
+	.navbar-default ._nav-blance>a{padding-right: 0;color: #000d23;}
+	.navbar-default ._nav-blance>a>span{color: #000d23;padding: 0 0 0 1rem}
+	.navbar-default .navbar-nav>._nav-active>a{color: #1acaed;}
+	.navbar-default .navbar-nav>._nav-li:before{content: "";position: absolute;z-index: -1;left: 50%;right: 50%;bottom: 0;background: #1acaed;height: 2px;-webkit-transition-property: left,right;transition-property: left,right;-webkit-transition-duration: .3s;transition-duration: .3s;-webkit-transition-timing-function: ease-out;transition-timing-function: ease-out;}
+	.navbar-default .navbar-nav>._nav-active:before{right: 15px;left: 15px;}
+    .navbar-default .navbar-nav>._nav-li:hover{background-color: transparent;border-bottom: none;color: #1acaed;}
+    .navbar-default .navbar-nav>._nav-li:hover::before{left: 15px;right: 15px;}
+    .navbar-default .navbar-nav>._nav-li>a:hover{color: #1acaed;}
+
+
+	.bottom-shadow{box-shadow: 0px 7px 6px 0px 
+		rgba(179, 179, 179, 0.17);border:none;}
+}	
+
+@media screen and (min-width: 992px){
+	html{font-size: 16px;}
+	.nav>._992-block{display: none;}
+	.dynamic {-webkit-transform: translateY(150px);-moz-transform: translateY(150px);-ms-transform: translateY(150px);-o-transform: translateY(150px);transform: translateY(150px);opacity: 0;}
+	.dynamic_display {-webkit-transform: translateY(0px);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0px);opacity: 1;-webkit-transition: all 1.5s ease;transition: all 1.5s ease;}
+
+
+}
+
+
+@media screen and (min-width: 1200px){
+	html{font-size: 20px;}
+}
+
+@media screen and (min-width: 1500px){
+	.container {width: 1420px;}
+
+}
+
+@media screen and (max-width: 992px){
+	.nav>li._992-none{display: none;}
+	.partners-box .list{text-align: center;}
+	.navbar-default .navbar-nav>li>a{padding-left: 12px;padding-right: 12px;}
+
+
+	.navbar .container{width: 100%;}
+	.navbar-header {float:none;} 
+	.navbar-left.navbar-right {float:none!important;} 
+	.navbar-toggle {display:block; margin-top: 16px;} 
+	.navbar-collapse {border-top:1px solid transparent; box-shadow:inset 0 1px 0 rgba(255,255,255,0.1); } 
+	.navbar-fixed-top {top:0; border-width:0 0 1px;} 
+	.navbar-collapse.collapse {display:none!important;} 
+	.navbar-nav {float:none!important;margin-top:7.5px;} 
+	.navbar-nav> li {float:none; } 
+	.navbar-nav> li> a {padding-top:10px; padding-bottom:10px;} 
+	.collapse.in {display:block!important;} 
+
+
+	.pic-nav .navbar-header {float:left;} 
+	.pic-nav .navbar-nav {float:right!important;margin-top:7.5px;} 
+	.pic-nav .navbar-nav> li {float:left; }  
+
+	.pic-form .form-control, .log-in, .pic-form .sign{border-radius: 5px;}
+}
+@media screen and (max-width: 1670px){
+	.member-pic-content{float: right;}
+}
+
+@media screen and (max-width: 1300px){
+	.side-catalog{padding:10rem 1rem 0 2rem;height: 100vh; left:-10.4rem;top:0;box-shadow: 0px 2px 10px 0px 
+		rgba(140, 140, 140, 0.15);background: #fff;-webkit-transition: left:1s ease;transition: left 1s ease;}
+	.side-catalog .side-bar {top: 8rem;right: 1.18rem;}
+	.member-pic-content{float: none;}
+	.timetable-top .row .col-lg-4{width: 50%;}
+	.timetable-top .row .col-lg-offset-2{margin-left: 0;}
+	.member-pic-content{width: 100%;}
+	.jiantou-box{display: block;}
+}
+
+@media screen and (max-width: 1200px){
+	.navbar-default .navbar-nav > li > .btn-sl {padding-left: 2rem;padding-right: 2rem;}
+	.navbar-default .navbar-nav>._nav-li>a {padding-left: 0.9rem;padding-right: 0.9rem;}
+	.partners-box .list img{height: 2rem;}
+}
+
+
+/*banner font*/
+.index-font-family {color: #1c3565;font-family: "Overpass-Light"; }
+.margin-bottom-20 {margin-bottom: 40px; }
+.margin-bottom-3rem {margin-bottom: 3rem; }
+.margin-bottom-60 {margin-bottom: 8rem; }
+.index-media-section {background-color: #00173f; }
+.index-media-section .container {background-color: #fff;padding: 4rem 1rem 0 1rem;overflow: hidden;border-radius: 1rem; }
+.index-media-section .team-list .row {margin-top: 0rem; }
+.index-media li { float: left;line-height: 100px;text-align: center; }
+.index-media-box {width: 100%;height: 100%;overflow: hidden; }
+.index-media li img {max-width: 100%; }
+.index-media li:after {clear: both;content: "";display: table; }
+.particles-js {position: absolute;top: 0;left: 0;width: 100%;height: 100%; }
+/*# sourceMappingURL=common.css.map */
+
+
+
+

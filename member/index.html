@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+  	<meta name="csrf-token" content="rpvu6XvSAKRuGKhlFtz8qmAkFu78BhaWITgTw5Hw">
+  	<meta name="renderer" content="webkit">
+	<title>member center
+</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="icon" href="../images/bitvr.ico">	
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/particles.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../js/layer/layer.js"></script>
+	<script src="../js/member.js"></script>
+</head>
+<body>
+<!-- // member navbar start -->
+<nav class="navbar navbar-default navbar-fixed-top bottom-shadow pic-nav">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img class="logo"  src="../images/logo.png" alt=""></a>
+		</div>
+		<ul class="nav navbar-nav pull-right">
+			<li class="_nav-blance"><a>Hi, 游遍天下 &nbsp;<span>|</span></a></li>
+			<li class="_nav-blance"><a>Balance: 2200BVR &nbsp;<span>|</span></a> </li>
+			<li class="_nav-li">
+				<a href="../member/logout.html" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logoff</a>
+				<form id="logout-form" action="../member/logout.html" method="POST" style="display: none;">
+	                <input type="hidden" name="_token" value="rpvu6XvSAKRuGKhlFtz8qmAkFu78BhaWITgTw5Hw">
+	            </form>
+			</li>
+		</ul>
+	</div><!-- /.container-fluid -->
+</nav><!-- // member navbar end -->
+<div class="main index-main">
+	<section class="member-pic-box">
+		<div class="container">
+			<div class="row">
+				<div class="member-pic-content">
+					<div class="buy">
+						<div class="row">								
+																								<div class="col-sm-6">
+										<div class="price-item">
+											<span class="tit text-uppercase">btc</span><span class="number gradient-color">0.00000573</span>									
+										</div>
+									</div>
+																																<div class="col-sm-6">
+										<div class="price-item">
+											<span class="tit text-uppercase">eth</span><span class="number gradient-color">0.00016670</span>									
+										</div>
+									</div>
+																																																																		</div>
+						<div id="persent-box">
+							<div class="progress-box-sl clearfix">
+								<div class="progress-box clearfix">
+									<div class="progress">
+										<div class="progress-bar box-gradient-color" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 99.99%"></div>
+										<p class="text-e">BITVR Remaining : 499999988800</p>
+									</div>
+									<span class="percentage-sl">99.99%</span>
+								</div>
+							</div>
+							<p class="text-center progress-text-a">Current Round  20% Bonus</p>
+						</div>
+						<div class="coming-soon">
+							<div class="row">
+								<div class="coming-soon-left col-sm-6">
+									<h2>Coming Soon!</h2>
+									<p>11/18 On sale</p>
+								</div>
+								<div class="coming-soon-right col-sm-6" id="count-index"></div>
+							</div>
+						</div>
+						<div class="pic-form padd-top0">
+							<div class="form-group text-center">
+								<a href="../member/buy.html" class="btn btn-primary pic-btn">Buy Now</a>
+							</div>
+						</div>
+						<h4 class="h4-b">Purchase History</h4>
+						<div class="table-responsive">
+							<table class="table text-center transaction-table">
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">Purchase Time</th>
+									<th class="text-center">Amount</th>
+									<th class="text-center">Currency</th>
+									<th class="text-center">Bonus</th>
+									<th class="text-center">Status</th>
+								</tr>
+								
+																<tr
+																			style="cursor:pointer;" 
+										onclick="getIdShow(24);"
+																	>
+									<td>24</td>
+									<td>2018-11-20 18:13</td>
+									<td>1001</td>
+									<td>BTC</td>
+									<td>0</td>
+									<td>
+																					<span>Waiting for payment</span>
+																			</td>
+								</tr>
+																<tr
+																	>
+									<td>23</td>
+									<td>2018-10-23 04:15</td>
+									<td>2000</td>
+									<td>BTC</td>
+									<td>0</td>
+									<td>
+																					<span>Confirmed</span>
+																			</td>
+								</tr>
+																<tr
+																	>
+									<td>22</td>
+									<td>2018-10-23 04:12</td>
+									<td>2000</td>
+									<td>BTC</td>
+									<td>0</td>
+									<td>
+																					<span>Failed</span>
+																			</td>
+								</tr>
+																	
+							</table>
+						</div>
+						<div class="text-center">
+							<ul class="pagination-sl clearfix">
+			<li class="left"><a href="javascript:;"></a></li>
+	
+	
+                    
+            
+            
+                                                                        <li class="active"><a href="javascript:;">1</a></li>
+                                                                                <li><a href="http://bitvr.io/member/index?page=2">2</a></li>
+                                                                                <li><a href="http://bitvr.io/member/index?page=3">3</a></li>
+                                                                                <li><a href="http://bitvr.io/member/index?page=4">4</a></li>
+                                                                                <li><a href="http://bitvr.io/member/index?page=5">5</a></li>
+                                                        	
+	
+			<li class="right"><a href="http://bitvr.io/member/index?page=2">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+	</ul>
+
+						</div>
+						<p class="text-center text-d">Bitcoin transactions can take up to 90 minutes to be confirmed. If your transaction is not confirmed after 90 minutes, please send us a note to support <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c55525a537c5e55484a4e12555312">[email&#160;protected]</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- // member left navbar start -->
+<div class="side-catalog">
+    <div class="side-bar"></div>
+    <div class="catalog-list">
+        <div class="catalog-item clearfix active ">
+            <div class="left"><a  href="../member/index.html">Dashboard</a></div>
+            <div class="right"><span></span></div>
+            <div class="middle"><span class="hr"></span></div>
+        </div>
+        <div id="buyHoverNone" class="catalog-item clearfix ">
+            <div class="left"><a  href="../member/buy.html">Buy BitVR</a></div>
+            <div class="right"><span></span></div>
+            <div class="middle"><span class="hr"></span></div>
+        </div>
+        <div class="catalog-item clearfix  ">
+            <div class="left"><a  href="../member/withdraw.html">Withdraw</a></div>
+            <div class="right"><span></span></div>
+            <div class="middle"><span class="hr"></span></div>
+        </div>
+        <div class="catalog-item clearfix ">
+            <div class="left"><a  href="../member/faqs.html">FAQs</a></div>
+            <div class="right"><span></span></div>
+            <div class="middle"><span class="hr"></span></div>
+        </div>
+        <div class="catalog-item clearfix ">
+            <div class="left"><a  href="../member/timetable.html">Timetable</a></div>
+            <div class="right"><span></span></div>
+            <div class="middle"><span class="hr"></span></div>
+        </div>
+        <div class="catalog-item clearfix ">
+            <div class="left"><a  href="../member/setting.html">Setting</a></div>
+            <div class="right"><span></span></div>
+            <div class="middle"><span class="hr"></span></div>
+        </div>
+    </div>
+    <div class="jiantou-box">
+        <span class="jiantou"></span>
+    </div>
+    <!-- <span class="active-ico"></span> -->
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+// coming-soon倒计时
+var times;
+function formtime() {
+    var end_time =  parseInt(new Date('2018/11/18 00:00:00').getTime() );
+    var nowtime =  parseInt(new Date().getTime() );
+    var time = end_time - nowtime;
+    var day = Math.floor(time / 1000 / (60 * 60 * 24));
+    var hour = parseInt(time / 1000 / 60 / 60 % 24);
+    var minute = parseInt(time / 1000 / 60 % 60);
+    var seconds = parseInt(time / 1000 % 60);
+    let miao = seconds;
+    if(hour<10){var hour = '0'+hour}
+    if(minute<10){var minute = '0'+minute}
+    if(seconds<10){var seconds = '0'+seconds}
+    times = setTimeout( "formtime()", 1000 );
+    if ( time <= 0  )
+    {
+        clearTimeout(times);
+        $("#count-index").html('<span class="day_show">'+00+'</span><em>d</em><span class="colon">:</span>'+'<span class="hour_show">'+00+'</span><em>h</em><span class="colon">:</span>'+'<span class="minute_show">'+00+'</span><em>m</em><span class="colon">:</span>'+'<span class="second_show">'+00+'</span><em>s</em>');
+        $(".pic-form.padd-top0>.form-group>a.pic-btn").attr('href','member/buy.html');
+        $(".pic-form.padd-top0>.form-group>a.pic-btn").css({});
+        $("#persent-box").fadeIn(200);
+        $(".coming-soon").hide();
+        $(".pic-form.padd-top0>.form-group>a.pic-btn").css({
+            'lineHeight':'2.4rem'
+        });
+    }
+    else
+    {
+        $("#count-index").html('<span class="day_show">'+day+'</span><em>d</em><span class="colon">:</span>'+'<span class="hour_show">'+hour+'</span><em>h</em><span class="colon">:</span>'+'<span class="minute_show">'+minute+'</span><em>m</em><span class="colon">:</span>'+'<span class="second_show">'+seconds+'</span><em>s</em>');
+        $(".pic-form.padd-top0>.form-group>a.pic-btn").attr('href','###');
+        $(".pic-form.padd-top0>.form-group>a.pic-btn").css({
+            'backgroundColor' : '#f5f5f5',
+            'color' : '#b3b3b3',
+            'borderColor' : '#f0f0f0',
+            'cursor': 'context-menu',
+            'lineHeight':'2.4rem'
+        });
+        $("#persent-box").hide();
+        $("#buyHoverNone>div.left>a").attr('href','###');
+        $("#buyHoverNone a").css({
+            'color': '#a5b3cc',
+            'cursor': 'context-menu'
+        });
+        $("#buyHoverNone .right span").css({
+            'display': 'inline-block',
+            'width': '0.45rem',
+            'height': '0.45rem',
+            'border-radius': '50%',
+            'background': '#a5b3cc',
+            'z-index': '10',
+            'marginRight' : 0,
+        });
+        $("#buyHoverNone .middle").css({
+            'marginRight' : 0,
+        });
+
+    }
+    
+}                           
+// window.onload=function(){
+    formtime();
+// }
+</script><!-- // member left navbar end -->
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title text-center" id="myModalLabel">Complete your purchase</h4>
+            </div>
+            <div class="modal-body">
+				<p class="confirm">
+					You are buying <span class="standout">1001</span> bitVR tokens using <span class="standout">BTC</span> &nbsp; for a total of <span class="standout">0.00494494</span> BTC
+	            </p>
+	            <h3>Next Step:</h3>
+				<p class="confirm">
+					Send <span class="standout">0.00494494</span> BTC to <br /> <span class="standout"> 1QHN9DEX8saZim9muDwjXCiQR6UEbnBpiH </span>
+					<br />
+									</p>
+				<p class="confirm size1">
+					Warning: If we received payment after your cancellation, then it will be ignored.
+				</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                	Back
+                </button>
+                <button type="button" class="btn btn-primary"  onclick="setOrder(24)">Cancel the order</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<script>
+function getIdShow(id) {
+  $('#myModal'+id).modal('show');
+}
+function setOrder(id) {
+	if(id == ''){
+		return false;
+	}
+	$.ajax({
+		type:'post',  
+        url:"../member/setOrder",
+        data:{id:id},
+        dataType:'json',
+        headers: {
+	       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    },
+	    success:function(data)
+	    {
+	    	if ( data.status == 1 )
+	    	{
+	    		layer.msg(data.msg,{icon:6});
+	    		setTimeout(function() {
+                    window.location.href = window.location.href;
+                },3000);
+	    	}
+	    	else
+	    	{
+	    		layer.msg(data.msg,{icon:5});
+	    		setTimeout(function() {
+                    window.location.href = window.location.href;
+                },3000);
+	    	}
+	    }
+	});
+}
+
+</script>
+
+</body>
+</html>

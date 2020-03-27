@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+  	<meta name="csrf-token" content="rpvu6XvSAKRuGKhlFtz8qmAkFu78BhaWITgTw5Hw">
+  	<meta name="renderer" content="webkit">
+	<title>BITVR</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="icon" href="images/bitvr.ico">	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/particles.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+		</head>
+<body>
+
+<!-- // navbar start -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="top-nav-header">
+		<div class="container">
+			<!-- // calculator start -->
+				<p class="text-right">
+					<span class="span-txt">1 BVR  =  <em>USD</em> 0.02343101<i>|</i><em>RMB</em> 0.15627971<i>|</i><em>BTC</em> 0.00000573<i>|</i><em>ETH</em> 0.00016670 <i>|</i><em>EUR</em> 0.02047711 </span>
+				</p>
+			<!-- // calculator end -->
+		</div>
+	</div>
+	<div class="container">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+    		</button>
+      		<a class="navbar-brand" href="index.html"><img class="logo"  src="images/logo.png" alt=""></a>
+    	</div>
+    	<!-- Collect the nav links, forms, and other content for toggling -->
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      		<ul class="nav navbar-nav navbar-right">
+		        <li class="_nav-li"><a href="index.html#problems">Problems</a></li>
+		        <li class="_nav-li"><a href="index.html#solution">Solutions</a></li>
+		        <li class="_nav-li"><a href="index.html#features">Features</a></li>
+		        <li class="_nav-li"><a href="index.html#token-distribution">Token Distribution</a></li>
+		        <li class="_nav-li"><a href="index.html#paper">Whitepaper</a></li>
+		        <li class="_nav-li"><a href="index.html#team">Team</a></li>
+		        <li class="_nav-li"><a href="index.html#Media">Media & partners</a></li>
+		        <li class="_nav-li"><a href="index.html#roadmap">Roadmap</a></li>
+		        
+		        <li class="_nav-li _992-block"><a href="join-whitelist.html">Join Whitelist</a></li>
+		        <li class="_992-none"><a class="btn btn-primary btn-sl" href="join-whitelist.html">Join Whitelist</a></li>
+      		</ul>
+    	</div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav>
+<!-- // navbar end -->
+	
+	<div class="main index-main">
+		<section class="price">
+			<div class="container">
+				<div class="title price-title">
+					<!-- <h2 class="index-h2">BVR Price</h2> -->
+					<h2 class="index-h2">Calculator</h2>
+					<p class="text-center"><span class="title-underline"></span></p>
+				</div>
+				<div class="text" style="display: none;">
+					<div class="price-list row">
+						<div class="col-md-3 col-xs-12 text-center">
+							<p class="font-a">1 BVR</p>
+							<p class="font-b">USD 0.02343101</p>
+						</div>
+						<div class="col-md-3 col-xs-12 text-center">
+							<p class="font-a">1 BVR</p>
+							<p class="font-b">RMB 0.15627971</p>
+						</div>
+						<div class="col-md-3 col-xs-12 text-center">
+							<p class="font-a">1 BVR</p>
+							<p class="font-b">BTC 0.00000573</p>
+						</div>
+						<div class="col-md-3 col-xs-12 text-center">
+							<p class="font-a">1 BVR</p>
+							<p class="font-b">ETH 0.00016670</p>
+						</div>
+					</div>
+				</div>
+				<div class="tit-img text-center">
+					<img src="images/calculator.png" alt="">
+				</div>
+				<div class="input-list-box">
+					<div>
+						<input type="hidden" id="usd" class="Conversion-rate" value="0.02343101">
+						<input type="hidden" id="btc" class="Conversion-rate" value="0.00000573">
+						<input type="hidden" id="eth" class="Conversion-rate" value="0.00016670">
+						<input type="hidden" id="rmb" class="Conversion-rate" value="0.15627971">
+						<input type="hidden" id="eur" class="Conversion-rate" value="0.02047711">
+					</div>
+
+					<div class="row">
+						<div class="col-md-5">
+							<span class="input-img-box"></span>
+							<div class="input-group">
+						      <input type="number" class="form-control conversion-a" min="0" value="0.02" onkeyup="onlyNonNegative(this)">
+						      <input type="hidden" name="data-id" value="1">
+						      <div class="input-group-btn">
+						        <div id="dropdown"> 
+						          <p class="dropdown-check">USD</p> 
+						          <ul class="dropdown-list"> 
+						          	<li><a href="javascript:;" data-id="1">USD</a></li>
+						          	<li><a href="javascript:;" data-id="2">RMB</a></li>
+						            <li><a href="javascript:;" data-id="3">BTC</a></li> 
+						            <li><a href="javascript:;" data-id="4">ETH</a></li>
+						            <li><a href="javascript:;" data-id="5">EUR</a></li> 
+						          </ul> 
+						        </div> 
+						      </div><!-- /btn-group -->
+						    </div><!-- /input-group -->
+						</div>
+						<div class="col-md-2 text-center">
+							<div class="switch-images">
+								<img src="images/switch.png" alt="">
+							</div>
+						</div>
+						<div class="col-md-5">
+							<span class="input-img-box"></span>
+							<div class="input-group">
+						      <input type="number" class="form-control conversion-b" min="0" value="1" onkeyup="onlyNonNegative(this)">
+						      <div class="input-group-btn">
+						        <p class="font-c">BVR</p>
+						      </div><!-- /btn-group -->
+						    </div><!-- /input-group -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+<script>
+	$(function(){
+		var inputTime=setInterval(function(){
+				var dropdownCheck=$(".dropdown-check").text().toLowerCase();
+				var id='#'+dropdownCheck;
+				var exchangeRate=$(id).val();
+				var conversionA=$(".conversion-a").val();
+			  $(".conversion-b").val(parseFloat(accDiv(conversionA,exchangeRate).toFixed(5)));
+		},60000);
+		        
+	})
+
+	// js 乘法精确
+	function accMul(arg1,arg2){   
+		var m=0,s1=arg1.toString(),s2=arg2.toString();
+		try{m+=s1.split(".")[1].length}catch(e){}   
+		try{m+=s2.split(".")[1].length}catch(e){}   
+		return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m)   
+	}
+
+	// js 除法精确
+	function accDiv(arg1,arg2){ 
+		var t1=0,t2=0,r1,r2; 
+		try{t1=arg1.toString().split(".")[1].length}catch(e){} 
+		try{t2=arg2.toString().split(".")[1].length}catch(e){} 
+		with(Math){ 
+			r1=Number(arg1.toString().replace(".","")) 
+			r2=Number(arg2.toString().replace(".","")) 
+			return (r1/r2)*pow(10,t2-t1); 
+		}
+	}
+
+	function onlyNonNegative(obj) {
+		var inputChar = event.keyCode;
+		//alert(event.keyCode);
+
+		//1.判断是否有多于一个小数点
+		if(inputChar==190 ) {//输入的是否为.
+			var index1 = obj.value.indexOf(".") + 1;//取第一次出现.的后一个位置
+			var index2 = obj.value.indexOf(".",index1);
+			while(index2!=-1) {
+			//alert("有多个.");
+
+				obj.value = obj.value.substring(0,index2);
+				index2 = obj.value.indexOf(".",index1);
+			}
+		}
+
+		//2.如果输入的不是.或者不是数字，替换 g:全局替换
+		obj.value = obj.value.replace(/[^(\d|.)]/g,"");
+
+		// obj.value = obj.value.replace(^\d{1,8}(\.\d{1,5})?$); //只能输入两个小数
+	}
+
+	function stopPropagation(e) { 
+		if (e.stopPropagation){
+			/*stopPropagation符合W3C标准．适用于FireFox等浏览器，不支持IE*/
+			e.stopPropagation();
+		}else{
+			/*cancelBubble方法不符合W3C的标准．且只支持IE浏览器*/
+			e.cancelBubble = true; 
+		}
+	} 
+	
+	$(".dropdown-check").on("click",function(e){
+		if($(".dropdown-list").css("display")=="block"){
+			$(".dropdown-list").hide();
+		}else{
+			$(".dropdown-list").show();
+		}
+		/*阻止事件冒泡*/
+		stopPropagation(e);
+	});
+	
+	$(".dropdown-list li a").on("click",function(){
+		let ids = $(this).attr('data-id');
+		$("input[name='data-id']").val($(this).attr('data-id'));
+		$(".dropdown-check").html($(this).html());
+		$(".dropdown-list").hide();
+		var dropdownCheck=$(this).html().toLowerCase();
+		var id='#'+dropdownCheck;
+		var exchangeRate=$(id).val();
+		var conversionA=$(".conversion-a").val();
+		$(".conversion-b").val(parseFloat(accDiv(conversionA,exchangeRate).toFixed(5)));
+
+	});
+	/*点击空白地方隐藏div*/
+	$(document).bind('click',function(){ 
+		$('.dropdown-list').hide(); 
+	});
+
+	$(".conversion-a").on("input propertychange",function(){
+		let type = Number($("input[name='data-id']").val());
+		var dropdownCheck=$(".dropdown-check").text().toLowerCase();
+		var id='#'+dropdownCheck;
+		// console.log(id);
+		var exchangeRate=$(id).val();
+		// console.log(exchangeRate);
+		var conversionA=$(this).val();
+		switch( type )
+		{
+			case 1:
+			case 2:
+				let str = amount(conversionA);
+				$(".conversion-a").val(str);			
+				break;
+			default:
+				var val = $(".conversion-a").val();
+				$(".conversion-a").val( amounts(val) );
+				break;
+		}
+		$(".conversion-b").val(parseFloat(accDiv(conversionA,exchangeRate).toFixed(5)));
+	})
+	$(".conversion-b").on("input propertychange",function(){
+		let type = Number($("input[name='data-id']").val());
+		var dropdownCheck=$(".dropdown-check").text().toLowerCase();
+		var id='#'+dropdownCheck;
+		var exchangeRate=$(id).val();
+		var conversionB=$(this).val();
+		switch( type )
+		{
+			case 1:
+			case 2:
+				$(".conversion-a").val(parseFloat(accMul(conversionB,exchangeRate).toFixed(2)));
+				break;
+			default:
+				$(".conversion-a").val(parseFloat(accMul(conversionB,exchangeRate).toFixed(5)));
+				break;
+		}
+		$(".conversion-b").val( amounts( $(".conversion-b").val() ) );
+	  
+	})
+function amount(v) {
+    var regStrs = [
+        ['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+        ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+        ['\\.(\\d?)\\.+', '.$1'], //禁止录入两个以上的点
+        ['^(\\d+\\.\\d{2}).+', '$1'] //禁止录入小数点后两位以上
+    ];
+    for (i = 0; i < regStrs.length; i++) {
+        var reg = new RegExp(regStrs[i][0]);
+        v = v.replace(reg, regStrs[i][1]);
+    }
+    return v;
+}
+function amounts(v) {
+    var regStrs = [
+        ['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+        ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+        ['\\.(\\d?)\\.+', '.$1'], //禁止录入两个以上的点
+        ['^(\\d+\\.\\d{5}).+', '$1'] //禁止录入小数点后两位以上
+    ];
+    for (i = 0; i < regStrs.length; i++) {
+        var reg = new RegExp(regStrs[i][0]);
+        v = v.replace(reg, regStrs[i][1]);
+    }
+    return v;
+}
+</script>
+</body>
+</html>

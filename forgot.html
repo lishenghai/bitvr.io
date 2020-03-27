@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+  	<meta name="csrf-token" content="rpvu6XvSAKRuGKhlFtz8qmAkFu78BhaWITgTw5Hw">
+  	<meta name="renderer" content="webkit">
+	<title>Forgot Password
+</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="icon" href="images/bitvr.ico">	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/particles.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+		</head>
+<body>
+<nav class="navbar navbar-default border-bottom-t">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><img class="logo"  src="images/logo.png" alt=""></a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="main">
+	<section class="login pic-padding-top">
+		<div class="container">
+			<h1>Forgot Password</h1>
+			<div class="pic-form">
+		        <div class="form-group">
+		            <label class="control-label">Email <span>*</span></label>
+		            <input type="email" class="form-control" id="email" placeholder="Please insert your email address">
+		            <span class="help-block notice-txt">We will send the verification code to your email address.</span>
+		        </div>
+		        <div class="form-group">
+		            <label class="control-label">Verification code <span>*</span></label>
+		            <div class="row">
+						<div class="col-md-8">
+				            <input type="text" class="form-control" id="captcha" onkeyup = "value=value.replace(/[^\d]/g,'')" placeholder="Please insert your verification code">
+						</div>
+						<div class="col-md-4">
+							<a href="javascript:;" onclick="sendCaptcha();" id="sendCaptcha" class="form-control text-center send-captcha">Send Verification code</a>
+						</div>
+					</div>
+		        </div>
+		        <div class="form-group">
+		        	<button type="button" onclick="submit();" id="submit" class="btn btn-block btn-primary pic-btn text-uppercase">next</button>
+		        </div>
+		        <div class="form-group text-center">&nbsp;</div>
+		        
+			</div>
+		</div>
+	</section>
+</div>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<script type="text/javascript">
+var timelimit = 60;
+function sendCaptcha() {
+	let email = $.trim( $("#email").val() );		
+	if ( email == '' )
+	{
+		layer.msg("User mailbox cannot be empty!",{icon:5});
+		setTimeout(function(){
+            $("#email").focus();
+        },3000);		
+		return false;
+	}
+	after();
+	$("#sendCaptcha").attr('onclick','');
+	$.ajax({
+		url:"sendemail",
+		dataType:'json',
+		type:'post',
+		headers: {
+	       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    },
+	    data:{'email':email},
+	    success:function(data)
+	    {
+	    	if ( data.status == 1 )
+	    	{
+	    		layer.msg(data.msg,{icon:6});
+	    	}
+	    	else
+	    	{
+	    		layer.msg(data.msg,{icon:5});
+	    		setTimeout(function(){
+		            window.location.href = window.location.href;
+		        },3000);
+	    	}
+	    }
+	});
+}
+//自动刷新页面上的时间
+function after(){    
+    let interval =setInterval(function(){
+    	$("#sendCaptcha").empty().append(timelimit);
+    	timelimit--;
+    	if ( timelimit < 0 )
+    	{
+    		clearInterval(interval);
+    		$("#sendCaptcha").attr('onclick','sendCaptcha()');
+    		$("#sendCaptcha").text('Send Verification code');
+    	}
+    	// after();
+    },1000);
+}
+function submit() {
+	let email = $.trim( $("#email").val() );
+	let captcha = $.trim( $("#captcha").val() );
+	if ( email == '' )
+	{
+		layer.msg("User mailbox cannot be empty!",{icon:5});
+		setTimeout(function(){
+            $("#email").focus();
+        },3000);		
+		return false;
+	}
+	if ( captcha == '' )
+	{
+		layer.msg("please enter verification code!",{icon:5});
+		setTimeout(function(){
+            $("#captcha").focus();
+        },3000);		
+		return false;
+	}
+	$.ajax({
+		url:"checkemail",
+		dataType:'json',
+		type:'post',
+		headers: {
+	       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    },
+	    data:{'email':email,'captcha':captcha},
+	    success:function(data)
+	    {
+	    	if ( data.status == 1 )
+	    	{
+	    		layer.msg(data.msg,{icon:6});
+	    		setTimeout(function(){
+		            window.location.href = data.jump;
+		        },3000);
+	    	}
+	    	else
+	    	{
+	    		layer.msg(data.msg,{icon:5});
+	    	}
+	    }
+	});
+}
+</script>
+</body>
+</html>
